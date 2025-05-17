@@ -1,66 +1,480 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f9f9f9;
-  color: #333;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family:'Nunito';
 }
-
-header {
-  background-color: #222;
-  color: white;
-  padding: 20px;
+:root{
+    background-color: rgb(236, 154, 82);
+    color: black;
+    -main-text-decoration-color:rgb(209, 201, 115)
 }
-
-.profile-container {
+body{
+    overflow-x: hidden;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 5% 2rem;
+  overflow-x: hidden;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8rem;
+  background-color: beige;
   display: flex;
   align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 100;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.logo{
+    font-size: 2.5rem;
+    color: black;
+    font-weight: 700;
+    cursor: default;
+    margin-left: 2rem;
+}
+.navbar {
+    display: flex;
+    justify-content: flex-end;  /* Moves items to the right */
+    align-items: center;
+    padding: 1rem 2rem; /* optional */
+}
+.navbar a{
+    font-size: 1.5rem;
+    color:black;
+    margin-left :4rem;
+    font-weight: 700;
+}
+.navbar a:hover,
+.navbar a:active{
+    color: rgb(120, 113, 113);
+}
+.CV{
+    font-size: 1.5rem;
+    color:black
+    margin-left 4rem;
+    font-weight: 700;
+}
+#menu-icon{
+    font-size: 3.6rem;
+    color: black;
+    display: none;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+
+}
+.home-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+span{
+    color: rgb(248, 247, 247);
+}
+.home-content h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.home-img {
+   position: relative;
+   width: 310px;
+   height: 310px;
+   border-radius: 50%;
+   z-index: 0;
 }
 
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid white;
+.home-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+        from 0deg,
+        #D2691E,
+        #8B4513,
+        #A0522D,
+        #D2691E
+    );
+    animation: rotateBorder 4s linear infinite;
+    z-index: -1;
 }
 
-.btn {
-  background: #00aaff;
-  color: white;
-  padding: 10px 15px;
-  text-decoration: none;
-  border-radius: 8px;
-  display: inline-block;
-  margin-top: 10px;
+@keyframes rotateBorder {
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-nav {
-  background: #006080;
-  padding: 10px;
-  text-align: center;
+.home-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: block;
+    margin: 5px; /* Matches the 210px wrapper size (200px + 5px all around) */
+}
+.home-content p{
+    font-size: 1.6rem;
+}
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid rgb(229, 172, 132);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #a92b08;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+.social-media a:hover{
+    background: #f4a835;
+    color:  #a92b08;
+    box-shadow: 0 0 1rem #f4a835;
+}
+.CV{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background:#ea4f24;
+    border-radius: 4rem;
+    border: .2rem solid rgb(229, 172, 132);
+    box-shadow: 0 0 1rem #f4a835;
+    font-size: 1.6rem;
+    color: black;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+    text-decoration: none;
+}
+.CV:visited,
+.CV:link,
+.CV:hover,
+.CV:active {
+    color: black ;           /* Applies to all link states */
+    text-decoration: none ;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
+/* .me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    width: 450px;
+    height: 150px;
+    background-color:#f1e0c6;
+    padding: 20px;
+    border: 2px solid black;
+      border-radius: 2rem;
+}
+.me-box1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    width: 450px;
+    height: 150px;
+    background-color:#f1e0c6;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 2rem;
+}
+.me-box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    width: 450px;
+    height: 150px;
+    background-color:#f1e0c6;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 2rem;
+} */
+
+.box-container {
+    display: flex; /* puts boxes side by side */
+    justify-content: center; /* centers the entire row */
+    gap: 30px; /* adds space between the boxes */
+    margin-top: 20px;
 }
 
-section {
-  padding: 20px;
+.me-box1,
+.me,
+.me-box2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    width: 450px;
+    height: 150px;
+    background-color: #f1e0c6;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 2rem;
+   transition: all 0.4s ease;
+
+    
+}
+.me-box1:hover{
+     background-color: aliceblue;
+       border-color:black;
+    transform: scale(1.02);
+}
+.me:hover{
+      background-color: aliceblue;
+        border-color:black;
+    transform: scale(1.02);
+}
+.me-box2:hover {
+            background-color: aliceblue;
+              border-color:black;
+    transform: scale(1.02);
+}
+.learner{
+    font-size: 4.5rem;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1e0c6;
+    padding: 8rem 9% 2rem;
+  
+
+}
+.about-content{
+     margin-bottom: 5rem;
+}
+.heading{
+    font-size: 4.5rem;
+    text-align: center;
+}
+.about-content h2{
+    text-align: center;
+    line-height: 1.2;
+}
+.about-content h3{
+    font-size: 2.6rem;
+
 }
 
-h2 {
-  color: #006080;
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+.headinng{
+    font-size: 4.5rem;
+    text-align: center;
+}
+.services h2{
+    margin-bottom: 5rem;
+}
+.services-container{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2rem;
+}
+.services-container .services-box{
+    flex: 1 1 30rem;
+    background:#f1e0c6;;
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid #993304;
+    transition: .5s ease;
+}
+.services-container .services-box:hover{
+    border-color:black;
+    transform: scale(1.02);
 }
 
-footer {
-  text-align: center;
-  padding: 15px;
-  background: #222;
-  color: white;
+.services-box h3{
+    font-size: 2.6rem;
+    margin: 1rem 0 3rem;
 }
+
+.Skills{
+    background: #f1e0c6;
+     text-align: center;
+}
+
+.Skills h2{
+    margin-bottom: 4rem;
+    line-height: 1.2;
+    font-size: 3.6rem;
+    display: flex;
+    justify-content: center;
+}
+.skills-container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    gap: 2.5rem;
+    
+}
+
+.skills-container .skill-box h3{
+    font-size: 2rem;
+    color:black;
+}
+
+.skills-container .skill-box h3:hover{
+    background:#A0522D;
+    color:black;
+    box-shadow: 0 0 1rem #f1e0c6;
+}
+
+.skills-container .skill-box p{
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+
+.contact h2{
+    margin-bottom: 3rem;
+}
+
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background: #f1e0c6;
+}
+.contact h2{
+    margin-bottom: 3rem;
+}
+
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background:#f1e0c6;;
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.contact form .input-box input{
+    width: 49%;
+}
+
+.contact form textarea{
+    resize: none;
+}
+
+.contact form .btn{
+    margin-top: 2rem;
+    cursor: pointer;
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.contact form .input-box input{
+    width: 49%;
+}
+
+.contact form textarea{
+    resize: none;
+}
+
+.contact form .btn{
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.contact form .btn{
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: #f1e0c6;
+}
+
+.footer-text{
+    font-size: 1.6rem;
+}
+
+.footer-iconTop{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem 1rem;
+    background-color:#f1e0c6;
+    border-radius: .8rem;
+    transition: .5s ease;
+    border: .2rem solid chocolate;
+}
+
+.footer-iconTop:hover{
+    box-shadow: 0 0 1rem #f1e0c6;
+}
+
+.footer-iconTop a i{
+    font-size: 2.4rem;
+    color:rgb(115, 50, 3);
+}  
+

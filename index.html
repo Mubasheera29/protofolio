@@ -1,65 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mubasheera Fatima | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css"  >
+      <title>My Responsive Portofolio</title>
 </head>
 <body>
-  <header>
-    <div class="profile-container">
-      <img src="WhatsApp Image 2025-05-14 at 1.54.44 PM.jpeg" alt="Mubasheera Fatima" class="profile-pic" />
-      <div>
-        <h1>Mubasheera Fatima</h1>
-        <p>ECE Student | Tech Enthusiast</p>
+    <header class="header">
+        <a href="#" class="logo">Portofolio</a>
+              <i class="fa-solid fa-bars" id="menu-icon"></i>
+       <nav class="navbar">
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+       </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hi,Myself</h3>
+            <h1>Mubasheera Fatima</h1>
+            <h3>And I'm <span>Frontend Developer</span></h3>
+            <p>I’m Mubasheera Fatima, a passionate and curious Electronics and Communication Engineering (ECE) student at Stanley College of Engineering and Technology. I enjoy building innovative tech solutions that combine both software and hardware. My interests lie in artificial intelligence, web development, and creating smart devices that solve real-world problems.</p>
+            <div class="social-media">
+                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                     <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <div class="CV">
+            <a href="#">Download CV</a>
+            </div>
+            <div>
+            </div>
+        </div>
+        <div class="home-img">
+            <img src="WhatsApp Image 2025-05-16 at 3.51.58 PM.jpeg">
+        </div>
+    </section>
+     <!--About section-->
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="Picture.jpg" alt="" />
       </div>
-    </div>
-  </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
+      <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3>Frontend Developer</h3>
+        <p>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am currently pursuing BE in ECE at Stanley College. I’ve worked on AI/ML, IoT, and web dev projects.
-      I'm passionate about innovation .
-    </p>
-  </section>
+I’m Mubasheera Fatima, a passionate and curious Electronics and Communication Engineering (ECE) student at Stanley College of Engineering and Technology. I enjoy building innovative tech solutions that combine both software and hardware. My interests lie in artificial intelligence, web development, and creating smart devices that solve real-world problems.
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li> Breast Cancer Detection using Machine Learning</li>
-      <li> Smart Irrigation System (IoT + Arduino)</li>
-      <li>Antifogging and Water-Resistant Device (Startup)</li>
-      <li> Personal Portfolio using HTML & CSS</li>
-    </ul>
-  </section>
+I have hands-on experience in areas like:
+<div class="box-container">
+  <div class="me"><b>Machine Learning</b> worked on a breast cancer detection project using AIMS.</div>
+    <div class="me-box1"><b>IoT & Embedded Systems</b>built a smart irrigation system using Arduino.</div>
+    <div class="me-box2"><b>Web Development</b>created responsive portfolio websites using HTML and CSS.</div>
+</div>
+<div class="learner">
+<p>I'm an active learner, science enthusiast, and team player, always excited to explore new technologies and contribute to meaningful project.</p>
+</div>
+        </p>
+        <a href="#" class="btn">Read more</a>
+      </div>
+    </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML, CSS, JavaScript</li>
-      <li>Machine Learning with Python</li>
-      <li>IoT using Arduino</li>
-      <li>Problem Solving & Communication</li>
-    </ul>
-  </section>
+    <!--Education section-->
+    <section class="edu" id="education">
+      <h2 class="headinng">My <span>Education</span></h2>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: mubasheera.xo@gmail.com</p>
-    <p>LinkedIn:https://www.linkedin.com/in/mubasheera-fatima-3a7307337</p>
-  </section>
+      <div class="services-container">
+        <div class="services-box">
+          <h3>School</h3>
+          <h2>G.Pulla Reddy High School</h2>
+          <p>
+    I completed my schooling at G. Pulla Reddy High School, located in Mehdipatnam, under the SSC Board, and passed out in the year 2020 with a CGPA of 9.7.  
+          </p>
+        </div>
+        <div class="services-box">
+          <h3> Junior College</h3>
+          <h2>St. Joseph's  Junior College </h2>
+          <p>
+            I pursued my intermediate education at St. Joseph's Junior College from 2020 to 2022, with a focus on the MPC stream (Mathematics, Physics, and Chemistry), and secured an outstanding 96%.
+          </p>
+        </div><br>
+        <div class="services-box">
+          <h3>Bachelor's Degree</h3>
+          <h2>Stanley College Of Engineering and Technology for Women</h2>
+          <p>
+            I am pursuing my Bachelor of Engineering (B.E.) in Electronics and Communication Engineering (ECE) at Stanley College of Engineering and Technology for Women, affiliated with Osmania University, from 2022 to 2026.
+      </div>
+    </section>
 
-  <footer>
-    <p>© 2025 Mubasheera Fatima. All rights reserved.</p>
-  </footer>
+    <!--skills section-->
+    <section class="Skills" id="skills">
+      <h2 class="Skills">My <span>Skills</span></h2>
+      <div class="skills-container">
+        <div class="skill-box">
+          <h3>C and Python</h3>
+          <p>
+I have a good understanding of<b>C</b> and<b>Python programming languages</b> . In C, I’m familiar with concepts like loops, arrays, functions, and pointers. In Python, I can write clean code using conditionals, functions, and basic libraries, which helps me in problem-solving and simple automation tasks.
+.</p>
+        </div>
+        <div class="skill-box">
+          <h3>HTML,CSS,Javascript</h3>
+          <p>
+I have a solid foundation in <b>HTML</b> and <b>CSS</b>, which I use to create structured, responsive, and visually appealing web pages. I’m comfortable with layouts, styling, and responsiveness using Flexbox and media queries. I also have basic knowledge of <b>JavaScript</b>, allowing me to add interactivity to websites through events, DOM manipulation, and simple functions.
+Let me know if you'd like to include any projects you’ve built using these skills!
+</p>
+        </div>
+        <div class="skill-box">
+          <h3>Public Speaking</h3>
+          <p>I have strong public speaking skills developed through active participation in presentations, group discussions, and events. I’m comfortable speaking in front of an audience, conveying ideas clearly, and engaging listeners effectively. These skills help me confidently present my projects and collaborate in team environments.</p>
+        </div>
+        <div class="skill-box">
+          <h3>Presentation skills</h3>
+          <p>Confident in delivering clear, engaging presentations and pitching innovative ideas. Experienced in presenting technical projects and startup concepts, including my antifogging device at Ideal Font 2.0.
+
+</p>
+        </div>
+      </div>
+    </section>
+
+    <!--Contact us section-->
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me</span></h2>
+
+      <form action="#">
+        <div class="input-box">
+          <input type="text" placeholder="Full Name" />
+          <input type="email" placeholder="Email Address" />
+        </div>
+
+        <div class="input-box">
+          <input type="number" placeholder="Mobile Number" />
+          <input type="text" placeholder="Email Subject" />
+        </div>
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Your Message"
+        ></textarea>
+        <input type="submit" value="send Message" class="btn" />
+      </form>
+    </section>
+
+    <!--footer section-->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2024 by @Mubasheera</p>
+      </div>
+      <div class="footer-iconTop">
+        <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+      </div>
+    </footer>
+
 </body>
 </html>
